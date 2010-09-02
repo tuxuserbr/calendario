@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), "lib", 'calendario')
 
 ActionView::Base.send :include, Calendario
 
-ApplicationController.class_eval do
+ActionController::Base.class_eval do
   def verificar_calendario
     begin
       @year = params[:id].split('_')[0].to_i
