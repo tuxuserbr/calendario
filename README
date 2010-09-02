@@ -11,22 +11,30 @@ $> script/plugin install git@github.com:tuxuserbr/calendario.git
 Example
 =======
 
-Em sua view (index.html.erb) faça:
+1º passo) Em sua view (index.html.erb) faça:
 
 <%= calendario(@year,@month,"seu_model","inicio_evento") %>
 
-Em suas rotas adicione as seguintes rotas:
+2º passo) Em suas rotas adicione as seguintes rotas:
 
   map.connect '/seu_model/:id/listar', :controller => 'seu_model', :action => 'index',  :method=>:get
   map.events '/events/:id', :controller=>:seu_model, :action=>:show, :method=>:get
   
-Em seu controller faça o seguinte:
+3º passo) Em seu controller faça o seguinte:
 
 class SeuController < ApplicationController
   def index
     verificar_calendario
   end
 end
+
+4º passo) Agora para finalizar, faça o seguinte:
+
+$> cp vendor/plugins/calendario/stylesheets/calendario.css /public/stylesheets
+
+e em seu layout, coloque:
+
+<%= stylesheet_link_tag 'calendario' %>
 
 
 Copyright (c) 2010 [tuxuserbr], released under the MIT license
