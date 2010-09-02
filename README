@@ -1,0 +1,32 @@
+Calendario
+==========
+
+Plugin muito simples para criação de um calendario sincronizado com alguma estrutura sua de agendamento.
+
+Para instalar faça:
+
+$> script/plugin install git@github.com:tuxuserbr/calendario.git
+
+
+Example
+=======
+
+Em sua view (index.html.erb) faça:
+
+<%= calendario(@year,@month,"seu_model","inicio_evento") %>
+
+Em suas rotas adicione as seguintes rotas:
+
+  map.connect '/seu_model/:id/listar', :controller => 'seu_model', :action => 'index',  :method=>:get
+  map.events '/events/:id', :controller=>:seu_model, :action=>:show, :method=>:get
+  
+Em seu controller faça o seguinte:
+
+class SeuController < ApplicationController
+  def index
+    verificar_calendario
+  end
+end
+
+
+Copyright (c) 2010 [tuxuserbr], released under the MIT license
