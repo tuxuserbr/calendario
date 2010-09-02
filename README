@@ -28,13 +28,17 @@ class SeuController < ApplicationController
   end
 end
 
-4º passo) Agora para finalizar, faça o seguinte:
+4º passo) para que o layout funcione, faça o seguinte:
 
-$> cp vendor/plugins/calendario/stylesheets/calendario.css /public/stylesheets
+$> cp vendor/plugins/calendario/stylesheets/calendario.css public/stylesheets
 
 e em seu layout, coloque:
 
 <%= stylesheet_link_tag 'calendario' %>
 
+5º passo) Agora para finalizar, adicione as imagens em vendor/plugins/calendario/images em /public/images, fazendo o seguinte:
 
-Copyright (c) 2010 [tuxuserbr], released under the MIT license
+$> cp vendor/plugins/calendario/images/*.png public/images
+
+
+Copyright (c) 2010 [UmbrellaTec], released under the MIT license
