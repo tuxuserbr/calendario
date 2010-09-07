@@ -11,7 +11,7 @@ $> script/plugin install git@github.com:tuxuserbr/calendario.git
 Example
 =======
 
-1º passo) Em sua view (index.html.erb) faça:
+1º passo) Em sua view (index.html.erb) coloque a seguinte linha:
 
 <%= calendario(@year,@month,"seu_model",Seu_Model.all(:conditions=>["to_char(seu_atributo,'mm-yyyy') = ? ","#{format('%0.2d',@month)}-#{@year}"]).map{|e| [e.seu_atributo,e.nome_que_vai_aparecer_na_agenda,e.descricao_do_evento,e.id]}) %>
 
