@@ -26,7 +26,6 @@
 }
 
 .calendario tr:first-child{
-	/*background-color: #0D0F1F;*/
 	background-color: #DFC88B;
 	color: black;
 	height: 25px;
@@ -41,16 +40,13 @@
 	overflow: auto;
 }
 
-.row_calendario .topo{
+.row_calendario .row_calendario_topo{
 	font-family: Georgia;
 	font-weight: bold;
 	font-size: 1.3em;
-	/*background-color: #DFFAFF;*/
+	height: 23px;
 	background-color: #CFBA81;
-	/*border-bottom: 1px solid lightblue;*/
 	border-bottom: 1px solid black;
-	-moz-border-radius: 0.3em;
-	border-radius: 0.3em;
 }
 
 .calendario #today{
@@ -66,8 +62,6 @@
 	background-color: #EFEFEF;
 	font-size: 1em;
 	border: 1px solid gray;
-	-moz-border-radius: 0.5em;
-	border-radius: 0.5em;
 }
 
 .evento .event_link{

@@ -5,7 +5,7 @@ Plugin muito simples para criação de um calendario sincronizado com alguma est
 
 Para instalar faça:
 
-$> script/plugin install git@github.com:tuxuserbr/calendario.git
+$> script/plugin install git://github.com/tuxuserbr/calendario.git
 
 
 Example

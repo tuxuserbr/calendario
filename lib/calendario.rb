@@ -27,9 +27,9 @@ module Calendario
     str += "<tr class='line_calendario'>"
     Date.civil(year.to_i,month.to_i).at_beginning_of_month.at_beginning_of_week.upto(Date.civil(year.to_i,month.to_i).end_of_month) do |day|
       if(day.wday == 0)
-        str += "<td style='width: 14%;'><div  id='#{((day.to_date == Date.today) ? 'today' : '')}' class='row_calendario'><div class='topo'>#{day.day}</div>#{adicionar_evento_calendario(format('%0.2d',day.day),format('%0.2d',month),year,h_eventos,action)}</div></div></td></tr><tr class='line_calendario'>"
+        str += "<td style='width: 14%;'><div  id='#{((day.to_date == Date.today) ? 'today' : '')}' class='row_calendario'><div class='row_calendario_topo'>#{day.day}</div>#{adicionar_evento_calendario(format('%0.2d',day.day),format('%0.2d',month),year,h_eventos,action)}</div></div></td></tr><tr class='line_calendario'>"
       else
-        str += "<td style='width: 14%;'><div id='#{((day.to_date == Date.today) ? 'today' : '')}' class='row_calendario'><div class='topo'>#{day.day}</div>#{adicionar_evento_calendario(format('%0.2d',day.day),format('%0.2d',month),day.year,h_eventos,action)}</div></td>"
+        str += "<td style='width: 14%;'><div id='#{((day.to_date == Date.today) ? 'today' : '')}' class='row_calendario'><div class='row_calendario_topo'>#{day.day}</div>#{adicionar_evento_calendario(format('%0.2d',day.day),format('%0.2d',month),day.year,h_eventos,action)}</div></td>"
       end
     end
     str += "</tr></table><script type='text/javascript'></script>"
